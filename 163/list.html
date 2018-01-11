@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../autoui.github.io/lib/flexible.js"></script>
+    </head>
+    <body>
+    <div id="listPage">
+        <header class="header">
+            <section class="header-logo"></section>
+            <section class="header-nav">
+                <ul class="header-nav-list">
+                    <li v-for="( nav, index ) in navList" class="nav-item" :class="{ active: activeNavIndex == nav.id }">
+                        {{ nav.text }}
+                    </li>
+                </ul>
+            </section>
+        </header>
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.2.6/vue.min.js"></script>
+    <script>
+    var listPage = new Vue({
+        el: '#listPage',
+
+        data: {
+            navList: [
+                {
+                    id: 1,
+                    text: '推荐'
+                },
+                {
+                    id: 2,
+                    text: '居家'
+                },
+                {
+                    id: 3,
+                    text: '配件'
+                }
+            ],
+            activeNavIndex: null
+        },
+
+        methods: {
+
+        },
+
+        beforeCreate: function() {},
+
+        created: function() {},
+
+        beforeMount: function() {},
+
+        mounted: function() {
+            this.activeNavIndex = this.navList[0].id;
+        },
+
+        beforeDestroy: function() {},
+
+        destroyed: function() {},
+
+        beforeUpdate: function() {},
+
+        updated: function() {}
+    })
+    </script>
+    </body>
+</html>
