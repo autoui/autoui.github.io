@@ -2,42 +2,87 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script src="../autoui.github.io/lib/flexible.js"></script>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="../lib/flexible.js"></script>
     </head>
     <body>
     <div id="listPage">
         <header class="header">
-            <section class="header-logo"></section>
-            <section class="header-nav">
-                <ul class="header-nav-list">
-                    <li v-for="( nav, index ) in navList" class="nav-item" :class="{ active: activeNavIndex == nav.id }">
-                        {{ nav.text }}
-                    </li>
-                </ul>
+            <section class="header-logo">
+                <div class="logo"></div>
+            </section>
+            <section class="header-nav" id="navScroll">
+                <div class="header-nav-scroller">
+                    <ul class="header-nav-list">
+                        <li v-for="( nav, index ) in navList" class="nav-item" :class="{ active: activeNavIndex == nav.id }">
+                            <em class="nav-item-txt">{{ nav.text }}</em>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </header>
     </div>
+    <script src="../lib/iscroll/build/iscroll.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.staticfile.org/vue/2.2.6/vue.min.js"></script>
     <script>
+    import IScrollView from './components/iscroll-view/index';
+
+    console.log( IScrollView );
+
+    /* Using these kinds of IScroll class for different cases. */
+    // import IScroll from 'iscroll'
+    // import IScroll from 'iscroll/build/iscroll-infinite.js
+    // import IScroll from 'iscroll/build/iscroll-probe.js
+    // import IScroll from 'iscroll/build/iscroll-view.js
+    // import IScroll from 'iscroll/build/iscroll-zoom.js
+    // import IScroll from 'iscroll/build/iscroll-lite.js
+
+    // Vue.use(IScrollView, IScroll)
+
     var listPage = new Vue({
         el: '#listPage',
+
+        // components: { IScroll, IScrollView },
 
         data: {
             navList: [
                 {
                     id: 1,
-                    text: '推荐'
+                    text: '测试'
                 },
                 {
                     id: 2,
-                    text: '居家'
+                    text: '测试'
                 },
                 {
                     id: 3,
-                    text: '配件'
+                    text: '测试'
+                },
+                {
+                    id: 4,
+                    text: '测试3'
+                },
+                {
+                    id: 5,
+                    text: '测试3'
+                },
+                {
+                    id: 6,
+                    text: '测试3'
+                },
+                {
+                    id: 7,
+                    text: '测试3'
+                },
+                {
+                    id: 8,
+                    text: '测试3'
                 }
             ],
-            activeNavIndex: null
+            activeNavIndex: null,
+            myScroll: null
         },
 
         methods: {
@@ -51,7 +96,10 @@
         beforeMount: function() {},
 
         mounted: function() {
+            console.log( document.querySelector('#navScroll').innerHTML );
             this.activeNavIndex = this.navList[0].id;
+
+            this.myScroll = new IScroll('#navScroll', { scrollX: true, scrollY: false, mouseWheel: true });
         },
 
         beforeDestroy: function() {},

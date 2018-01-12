@@ -1,0 +1,107 @@
+.header {
+    background-color: #fff;
+}
+.header>.header-logo{
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-flex-flow:row nowrap;
+    -moz-flex-flow:row nowrap;
+    -ms-flex-flow:row nowrap;
+    flex-flow:row nowrap;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    -webkit-align-items:center;
+    -moz-align-items:center;
+    align-items:center;
+    justify-content: center;
+    padding:.21333rem .4rem;
+}
+.header>.header-logo .logo{
+    display:inline-block;
+    width:1.84rem;
+    height:.53333rem;
+    margin-right:.26667rem;
+    background-image:url(//yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-11d65342f9.png);
+    background-size:cover;
+    background-position:center;
+}
+.header>.header-logo>.ipt{
+    -webkit-box-flex:1;
+    -webkit-flex-grow:1;
+    -moz-flex-grow:1;
+    -ms-flex-positive:1;
+    flex-grow:1;
+}
+
+.header-nav {
+    position: relative;
+    width: 100%;
+    height:.8rem;
+    overflow: hidden;
+}
+.header-nav .header-nav-scroller {
+    padding: 0 .4rem;
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /*width: 5000px;*/
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+.header-nav-list {
+    font-size: 0;
+    white-space: nowrap;
+}
+.header-nav .header-nav-list .nav-item {
+    position:relative;
+    display: inline-block;
+    /*float: left;*/
+    margin-left:.64rem;
+/*    -webkit-flex-shrink:0;
+    -moz-flex-shrink:0;
+    -ms-flex-negative:0;
+    flex-shrink:0;*/
+}
+.header-nav .header-nav-list .nav-item:first-of-type{
+    margin-left:0;
+}
+.header-nav .header-nav-list .nav-item .nav-item-txt {
+    display:inline-block;
+    padding:0 .21333333rem/* 16px */;
+    line-height:.8rem;
+    font-size:.37333rem;
+    color:#333;
+    text-align:center;
+}
+.header-nav .header-nav-list .nav-item.active{
+    color:#b4282d;
+}
+.header-nav .header-nav-list .nav-item.active .nav-item-txt {
+    position:relative;
+    color:#b4282d;
+}
+.header-nav .header-nav-list .nav-item.active .nav-item-txt:after{
+    content:' ';
+    position:absolute;
+    left:0;bottom:0;
+    width:100%;
+    height:.05333rem;
+    background-color:#b4282d;
+}
