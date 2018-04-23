@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import scrollNav from '@/components/scroll-nav.vue'
-import swiper from '@/components/swiper.vue'
+import ScrollNav from '@/components/scroll-nav.vue'
+import Swiper from '@/components/swiper.vue'
 export default {
 
   components: {
-    scrollNav,
-    swiper
+    ScrollNav,
+    Swiper
   },
 
   data () {

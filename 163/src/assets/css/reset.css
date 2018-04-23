@@ -78,8 +78,8 @@ input::-ms-clear,input::-ms-reveal {
 }
 
 :root * {
-    -webkit-filter: none ;
-    filter: none
+    -webkit-filter: none !ie;
+    filter: none !ie
 }
 
 *,:after,:before {
@@ -98,7 +98,8 @@ input::-ms-clear,input::-ms-reveal {
 }
 
 html {
-
+    -ms-touch-action: manipulation;
+    touch-action: manipulation
 }
 
 input {

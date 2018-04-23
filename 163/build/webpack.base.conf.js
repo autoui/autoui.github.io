@@ -38,6 +38,9 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  externals: {
+    'zepto': 'Zepto'
+  },
   module: {
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
