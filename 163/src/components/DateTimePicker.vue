@@ -25,7 +25,15 @@
 
                 <div class="datetimepicker-dates-wrap">
                     <div class="datetimepicker-date" v-for="dateObj in dateObjs" :key="dateObj.id">
-                        <div class="datetimepicker-date-inner" :class="[{ 'active': dateObj.isSelected }, dateObj.stage + '-month']">
+                        <div
+                            class="datetimepicker-date-inner"
+                            :class="[{ 'active': dateObj.isSelected }, dateObj.stage + '-month']"
+                            :data-year="dateObj.year"
+                            :data-month="dateObj.month"
+                            :data-date="dateObj.date"
+                            :data-day="dateObj.day"
+                            @click="onDateClick"
+                        >
                             {{ dateObj.date }}
                         </div>
                     </div>
@@ -40,11 +48,11 @@ export default {
 
     data () {
         return {
-            weekdays: ['日', '一', '二', '三', '四', '五', '六']
+            weekdays: ['日', '一', '二', '三', '四', '五', '六'],
             // dateObjs: []
-            // currentYear: null,
-            // currentMonth: null,
-            // currentDate: null
+            selectedYear: null,
+            selectedMonth: null,
+            selectedDate: null
         }
     },
 
@@ -58,25 +66,25 @@ export default {
             return this.initTimestamp ? new Date( this.initTimestamp ) : new Date();
         },
         currentYear () {
-            return this.initDateTime.getFullYear()
+            return this.selectedYear || this.initDateTime.getFullYear()
         },
 
         currentMonth () {
-            return this.initDateTime.getMonth()
+            return this.selectedMonth || this.initDateTime.getMonth()
         },
 
         currentDate () {
-            return this.initDateTime.getDate()
+            return this.selectedDate || this.initDateTime.getDate()
         },
 
         dateObjs () {
             let that = this;
 
             // 设置选中年月日
-            let year = this.currentYear || dateTime.getFullYear(),
-                month = this.currentMonth || dateTime.getMonth(), // month value: [0, ... , 11]
-                date = this.currentDate || dateTime.getDate();
-
+            let year = this.currentYear,
+                month = this.currentMonth, // month value: [0, ... , 11]
+                date = this.currentDate;
+            console.log(this.currentMonth);
             let dateArr = (function( y, m, d ){
                 let dateLen = that.__getDateLength( y, m+1 ),
                     __dateArr = [];
@@ -128,7 +136,7 @@ export default {
 
                 return __dateArr;
             })( year, month, date );
-
+            console.log( dateArr );
             return dateArr;
         }
     },
@@ -147,6 +155,13 @@ export default {
         __getWeekday( year, month, date ) {
             // month  = [1, ..., 12]月
             return ( new Date( year, month-1, date ) ).getDay()
+        },
+
+        onDateClick( e ) {
+            var dataset = e.target.dataset;
+
+            [this.selectedYear, this.selectedMonth, this.selectedDate] = [+dataset.year, dataset.month-1, +dataset.date];
+            console.log(this.selectedMonth)
         }
     }
 }
@@ -200,19 +215,19 @@ export default {
             justify-content: space-between;
             align-items: center;
 
-            .prev-year {
+            .prev-month {
                 display: inline-block;
                 width: .26666667rem/* 20px */;
                 height: .26666667rem/* 20px */;
-                margin-right: .26666667rem/* 20px */;
                 border-left: 1px solid #38f;
                 border-bottom: 1px solid #38f;
                 transform: rotateZ(45deg);
                 transform-origin: center;
             }
-            .prev-month {
+            .prev-year {
                 position: relative;
                 display: inline-block;
+                margin-right: .53333333rem/* 40px */;
                 width: .26666667rem/* 20px */;
                 height: .26666667rem/* 20px */;
                 border-left: 1px solid #38f;
@@ -233,9 +248,10 @@ export default {
                     // transform: rotateZ(45deg);
                 }
             }
-            .next-month {
+            .next-year {
                 position: relative;
                 display: inline-block;
+                margin-left: .53333333rem/* 40px */;
                 width: .26666667rem/* 20px */;
                 height: .26666667rem/* 20px */;
                 border-top: 1px solid #38f;
@@ -256,11 +272,10 @@ export default {
                     // transform: rotateZ(45deg);
                 }
             }
-            .next-year {
+            .next-month {
                 display: inline-block;
                 width: .26666667rem/* 20px */;
                 height: .26666667rem/* 20px */;
-                margin-left: .26666667rem/* 20px */;
                 border-top: 1px solid #38f;
                 border-right: 1px solid #38f;
                 transform: rotateZ(45deg);

@@ -39,7 +39,7 @@ export default new Router({
                 }
             ]
         }
-    ],
+    ]
 
     // scrollBehavior (to, from, savedPosition) {
     //     // return  期望滚动到的位置
