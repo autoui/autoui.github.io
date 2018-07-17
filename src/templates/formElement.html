@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>表单元素</title>
+        <!-- build:css ../css/common/global.min.css -->
+        <link rel="stylesheet" href="../common/css/reset.pc.css" />
+        <link rel="stylesheet" href="../common/css/common.pc.css" />
+        <!-- endbuild -->
+        <!-- build:css ../css/components/formElement.min.css -->
+        <link rel="stylesheet" href="../components/formElement/css/form.element.css" />
+        <link rel="stylesheet" href="../css/templates.css" />
+        <!-- endbuild -->
+    </head>
+    <body>
+    <div class="p30">
+        <div class="f16">按钮</div>
+        <div class="mt10 p30 border bgc-fff">
+            <a href="javascript:;" class="btn btn-default">按钮</a>
+            <a href="javascript:;" class="btn btn-default-reverse">按钮</a>
+            <a href="javascript:;" class="btn btn-success">按钮</a>
+            <a href="javascript:;" class="btn btn-success-reverse">按钮</a>
+            <div class="f16 mt10">htmlcode</div>
+            <xmp class="mt10 border border-d">
+                <a href="javascript:;" class="btn btn-default">按钮</a>
+                <a href="javascript:;" class="btn btn-default-reverse">按钮</a>
+                <a href="javascript:;" class="btn btn-success">按钮</a>
+                <a href="javascript:;" class="btn btn-success-reverse">按钮</a>
+            </xmp>
+        </div>
+    </div>
+    <div class="p30">
+        <div class="f16">文本输入域</div>
+        <div class="mt10 p30 border bgc-fff">
+            <div class="mt10"><textarea name="" id="" rows="3" class="textarea w360"></textarea></div>
+            <div class="mt10"><textarea name="" id="" rows="3" class="textarea block"></textarea></div>
+            <div class="f16 mt10">htmlcode</div>
+            <xmp class="mt10 border border-d">
+                <div class="mt10"><textarea name="" id="" rows="3" class="textarea w360"></textarea></div>
+                <div class="mt10"><textarea name="" id="" rows="3" class="textarea block"></textarea></div>
+            </xmp>
+        </div>
+    </div>
+
+    <div class="p30">
+        <div class="f16">下拉菜单</div>
+        <div class="mt10 p30 border bgc-fff">
+            <select name="" id="" class="select w175">
+                <option value="">下拉1</option>
+                <option value="">下拉2</option>
+                <option value="">下拉3</option>
+            </select>
+            <select name="" id="" class="select w360">
+                <option value="">下拉1</option>
+                <option value="">下拉2</option>
+                <option value="">下拉3</option>
+            </select>
+            <div class="f16 mt10">htmlcode</div>
+            <xmp class="mt10 border border-d">
+                <select name="" id="" class="select w175">
+                    <option value="">下拉1</option>
+                    <option value="">下拉2</option>
+                    <option value="">下拉3</option>
+                </select>
+                <select name="" id="" class="select w360">
+                    <option value="">下拉1</option>
+                    <option value="">下拉2</option>
+                    <option value="">下拉3</option>
+                </select>
+            </xmp>
+        </div>
+    </div>
+
+    <div class="p30">
+        <div class="f16">文本输入框</div>
+        <div class="mt10 p30 border bgc-fff">
+            <input type="text" class="inp-text" placeholder="输入框" />
+            <input type="text" class="inp-text w360" placeholder="宽度360" />
+            <input type="text" class="inp-text block mt10" placeholder="宽度100%" />
+            <div class="f16 mt10">htmlcode</div>
+            <xmp class="mt10 border border-d">
+                <input type="text" class="inp-text" placeholder="输入框" />
+                <input type="text" class="inp-text w360" placeholder="宽度360" />
+                <input type="text" class="inp-text block mt10" placeholder="宽度100%" />
+            </xmp>
+        </div>
+    </div>
+
+    <div class="p30">
+        <div class="f18">单选</div>
+        <div class="mt10 p30 border bgc-fff">
+            <label class="radio disabled">
+                <input type="radio" name="radio1" class="hide" />
+                <em class="radio-content">radio 单选文字1</em>
+            </label>
+            <label class="radio">
+                <input type="radio" name="radio1" class="hide" />
+                <em class="radio-content">radio 单选文字2</em>
+            </label>
+            <label class="radio">
+                <input type="radio" name="radio1" class="hide" />
+                <em class="radio-content">radio 单选文字3</em>
+            </label>
+            <label class="radio">
+                <input type="radio" name="radio1" class="hide" />
+                <em class="radio-content">radio 单选文字4</em>
+            </label>
+            <div class="f16 mt10">htmlcode</div>
+            <xmp class="mt10 border border-d">
+                <label class="radio disabled">
+                    <input type="radio" name="radio1" class="hide" />
+                    <em class="radio-content">radio 单选文字1</em>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio1" class="hide" />
+                    <em class="radio-content">radio 单选文字2</em>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio1" class="hide" />
+                    <em class="radio-content">radio 单选文字3</em>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio1" class="hide" />
+                    <em class="radio-content">radio 单选文字4</em>
+                </label>
+            </xmp>
+            <div class="f16 mt10">javascript</div>
+            <xmp class="mt10 ptb10 border border-d">
+    //可加到公用脚本中
+    $(document).on('click', '.radio', function(e){
+        e.preventDefault ? e.preventDefault() : e.returnValue = false ;
+        var filterName = $(this).children(':radio').attr('name');
+        if($(this).is('.disabled')) {
+            return false;
+        } else {
+            $(':radio[name="' + filterName + '"]').prop('checked',false).parent('.radio').removeClass('checked');
+            $(this).addClass('checked').children(':radio').prop('checked',true);
+        }
+    });
+            </xmp>
+        </div>
+    </div>
+
+    <div class="p30">
+        <div class="f18">复选</div>
+        <div class="mt20 p30 border bgc-fff">
+            <div>
+                <label class="checkbox disabled">
+                    <input type="checkbox" name="checkbox1" class="hide" />
+                    <em class="checkbox-content">checkbox 复选框（禁用）</em>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox1" class="hide" />
+                    <em class="checkbox-content">checkbox 复选框</em>
+                </label>
+                <label class="checkbox" data-fn="myFn">
+                    <input type="checkbox" name="checkbox1" class="hide" />
+                    <em class="checkbox-content">checkbox 复选框（点击触发事件可将函数名存储在 data-fn 属性中）</em>
+                </label>
+            </div>
+            <div class="f16 mt10">htmlcode</div>
+            <xmp class="mt10 ptb10 border border-d">
+                <label class="checkbox disabled">
+                    <input type="checkbox" name="checkbox1" class="hide" />
+                    <em class="checkbox-content">checkbox 复选框（禁用）</em>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox1" class="hide" />
+                    <em class="checkbox-content">checkbox 复选框</em>
+                </label>
+                <label class="checkbox" data-fn="myFn">
+                    <input type="checkbox" name="checkbox1" class="hide" />
+                    <em class="checkbox-content">checkbox 复选框（点击触发事件可将函数名存储在 data-fn 属性中）</em>
+                </label>
+            </xmp>
+            <div class="f16 mt10">javascript</div>
+            <xmp class="mt10 ptb10 border border-d">
+    //可加到公用脚本中
+    $(document).on('click', '.checkbox', function(e){
+        e.preventDefault ? e.preventDefault() : e.returnValue = false ;
+
+        if($(this).is('.disabled')) {
+            return false;
+        } else {
+            $(this).toggleClass('checked').children(':checkbox').prop('checked',!!$(this).is('.checked'));
+            var myFn = $.trim($(this).attr('data-fn'));
+            if(myFn && typeof window.myFn == 'function') {
+                window.myFn.call(this);
+            }
+        }
+    });
+            </xmp>
+        </div>
+    </div>
+    <!-- build:js ../js/global/jquery.js -->
+    <script src="../../global/jquery-1.8.3.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js ../js/common/global.js -->
+    <script src="../common/js/global.js" type="text/javascript"></script>
+    <!-- endbuild -->
+    <!-- build:js ../js/components/formElement.min.js -->
+    <script src="../js/test1.js" type="text/javascript"></script>
+    <script src="../js/test2.js" type="text/javascript"></script>
+    <!-- endbuild -->
+<!--     <script>
+    //可加到公用脚本中
+    $(document).on('click', '.radio', function(e){
+        e.preventDefault ? e.preventDefault() : e.returnValue = false ;
+        var filterName = $(this).children(':radio').attr('name');
+        if($(this).is('.disabled')) {
+            return false;
+        } else {
+            $(':radio[name="' + filterName + '"]').prop('checked',false).parent('.radio').removeClass('checked');
+            $(this).addClass('checked').children(':radio').prop('checked',true);
+        }
+    });
+
+    $(document).on('click', '.checkbox', function(e){
+        e.preventDefault ? e.preventDefault() : e.returnValue = false ;
+
+        if($(this).is('.disabled')) {
+            return false;
+        } else {
+            $(this).toggleClass('checked').children(':checkbox').prop('checked',!!$(this).is('.checked'));
+            var myFn = $.trim($(this).attr('data-fn'));
+            if(myFn && typeof window.myFn == 'function') {
+                window.myFn.call(this);
+            }
+        }
+    });
+    </script> -->
+    </body>
+</html>

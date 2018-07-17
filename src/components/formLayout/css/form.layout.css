@@ -1,0 +1,19 @@
+/* 表单布局 */
+.form {}
+.form-group:before, .form-group:after, .form-content:before, .form-content:after { content:''; display:table; height:0; }
+.form-group:after, .form-content:after { clear:both; }
+.form-group, .form-content { *zoom:1;}
+.form-group { padding-bottom:15px; }
+.form-label { display:inline; float:left; width:110px; padding-top:6px; padding-bottom:6px; color:#303D46; line-height:20px; }
+.form-content { margin-left:120px; }
+.form-text { display:inline-block; padding-top:6px; padding-bottom:6px; line-height:20px; *display:inline; *zoom:1; }
+.form-comment { display:inline-block; padding-top:6px; padding-bottom:6px; color:#999; line-height:20px; *display:inline; *zoom:1; }
+
+.form.form-condensed .form-group { padding-bottom:10px; }
+.form.form-expand .form-group { padding-bottom:20px; }
+
+.form-inline, .form-auto { font-size:0; }
+.form-inline .form-group, .form-auto .form-group { display:inline-block; margin-right:30px; vertical-align:top; *display:inline; }
+
+.form-auto .form-label { width:auto; }
+.form-auto .form-content { display:inline; float:left; margin-left:10px; }

@@ -1,0 +1,21 @@
+.ul li + li,
+.ol li + li {
+    margin-top: 10px;
+}
+
+.ul,
+.ol {
+    margin: 10px 0 10px 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.ol-num {
+    list-style: decimal;
+}
+.ol-l-roman {
+    list-style: lower-roman;
+}
+.ol-u-roman {
+    list-style: upper-roman;
+}

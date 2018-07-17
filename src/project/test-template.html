@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <script src="../js/test1.js"></script>
+    <script>
+    var tem = template("Hello {{ name }}!");
+    var html = tem({name: "Mustache"});
+    var textnode = document.createTextNode( html );
+    document.body.appendChild( textnode );
+    </script>
+    </body>
+</html>

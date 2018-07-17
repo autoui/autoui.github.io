@@ -1,0 +1,50 @@
+/* 按钮 */
+.btn { display:inline-block; padding:10px 30px; line-height:16px; text-align:center; border-width:1px; border-style:solid; overflow:visible; white-space:nowrap; font-size:14px; -webkit-border-radius:4px; border-radius:4px; *display:inline; *zoom:1;}
+
+.btn-default { background-color:#0797D9; border-color:#0797D9; color:#fff; }
+.btn-default-reverse { background-color:#fff; border-color:#0797D9; color:#0797D9; }
+.btn-success { background-color:#3DBA3F; border-color:#3DBA3F; color:#fff; }
+.btn-success-reverse { background-color:#fff; border-color:#3DBA3F; color:#3DBA3F; }
+.btn-info { color: #aaa; }
+.btn-warning { background-color: #f0ad4e; border-color: #f0ad4e; color: #fff; }
+.btn-error { background-color: #d9534f; border-color: #d9534f; color: #fff; }
+.btn-disabled { background-color: #f5f5f5; border-color: #e5e5e5; color: #a8b4be; cursor: not-allowed; }
+
+.btn-xs {}
+.btn-sm {}
+.btn-lg {}
+
+/* 输入框 */
+.inp-text { display:inline-block; padding:5px 9px; height:32px; background-color:#fff; border:1px solid #c9c9c9; line-height:20px; -webkit-border-radius:3px; border-radius:3px; -webkit-box-shadow:0 0 5px rgba(0,0,0,.1) inset; box-shadow:0 0 5px rgba(0,0,0,.1) inset; }
+.inp-text:focus { border-color:#0797d9; }
+
+.inp-text.w360 { width:360px; }
+.inp-text.block { width:100%; }
+
+/* 文本域 */
+.textarea { display:inline-block; padding:5px 10px; height:92px; border:1px solid #c9c9c9; background-color:#fff; overflow-y:auto; line-height:20px; -webkit-border-radius:3px; border-radius:3px; -webkit-box-shadow:0 0 5px rgba(0,0,0,.1) inset; box-shadow:0 0 5px rgba(0,0,0,.1) inset; resize:none; word-wrap:break-word; word-break:break-all; }
+.textarea:focus { border-color:#0797d9; }
+
+.textarea.w360 { width:360px; }
+.textarea.block { display:block; width:100%; }
+
+/* 下拉菜单 */
+.select { height:24px; margin-top:4px; margin-bottom:4px; border:1px solid #c9c9c9; /*appearance:none; -moz-appearance:none; -webkit-appearance:none;*/}
+:root .select { height:32px; margin-top:0; margin-bottom:0; }
+.select.w175 { width:175px; }
+.select.w360 { width:360px; }
+
+/* 单选 */
+.radio .radio-content:before, .checkbox .checkbox-content:before { position:absolute; left:0; top:6px; font-family:"aui-icon" !important; font-size:16px; font-style:normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.radio { position:relative; display:inline-block; padding-left:20px; padding-top:6px; padding-bottom:6px; line-height:20px; cursor:pointer; *display:inline; *zoom:1; }
+.radio .radio-content:before { content:"\e611"; }
+.radio.checked .radio-content:before { content:"\e600"; }
+.radio.disabled { cursor:default; }
+.radio.disabled .radio-content { color:#c9c9c9; }
+
+.checkbox { position:relative; display:inline-block; padding-left:20px; padding-top:6px; padding-bottom:6px; line-height:20px; cursor:pointer; *display:inline; *zoom:1; }
+.checkbox .checkbox-content:before { content:"\e602"; }
+.checkbox.checked .checkbox-content:before { content:"\e603"; }
+.checkbox.disabled { cursor:default; }
+.checkbox.disabled .checkbox-content { color:#c9c9c9; }

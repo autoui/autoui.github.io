@@ -1,0 +1,18 @@
+.tb { line-height:20px; }
+.tb th { padding:10px 20px; line-height:16px; background-color:#e5e5e5; color:#6c7882; font-weight:normal; }
+.tb td { padding:10px 20px; background-color:#fff; border-bottom:1px solid #e5e5e5; vertical-align:middle;}
+
+.tb-condense th, .tb-condense td { padding:5px 20px; }
+
+.tb-hover tr:hover td { background-color:#fafafa; }
+
+.tb-border, .tb-border th, .tb-border td { border:1px solid #e5e5e5; }
+
+.tb-thead {
+    padding-right: 17px;
+    background-color:#e5e5e5;
+}
+.tb-body {
+    height: 200px;
+    overflow-y: scroll;
+}

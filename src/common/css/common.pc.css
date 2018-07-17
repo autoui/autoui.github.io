@@ -1,0 +1,39 @@
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+
+* html .clearfix { height: 1%; }
+
+.clearfix { display: block; }
+
+
+.fl { display:inline; float:left; }
+.fr { display:inline; float:right; }
+
+.t-left { text-align:left; }
+.t-center { text-align:center; }
+.t-right { text-align:right; }
+
+.f12 { font-size:12px; }
+.f14 { font-size:14px; }
+.f16 { font-size:16px; }
+.f18 { font-size:18px; }
+
+.c-info { color: #aaa; }
+.c-warning { color: #f0ad4e; }
+.c-success { color: #3DBA3F; }
+.c-error { color: #d9534f; }
+.c-disabled {}
+
+.border { border:1px solid #c9c9c9; }
+.border-t { border-top:1px solid #c9c9c9; }
+.border-b { border-bottom:1px solid #c9c9c9; }
+.border-l { border-left:1px solid #c9c9c9; }
+.border-r { border-right:1px solid #c9c9c9; }
+.border.border-d { border:1px dashed #c9c9c9; }
+.border-t.border-d { border-top:1px dashed #c9c9c9; }
+.border-b.border-d { border-bottom:1px dashed #c9c9c9; }
+.border-l.border-d { border-left:1px dashed #c9c9c9; }
+.border-r.border-d { border-right:1px dashed #c9c9c9; }
+
+.hide { display:none; }
+
