@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>表单布局</title>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/github-light.css">
+
         <link rel="stylesheet" href="src/common/css/icon.autoui.css" />
         <link rel="stylesheet" href="src/common/css/reset.pc.css" />
         <link rel="stylesheet" href="src/common/css/common.pc.css" />
@@ -19,258 +22,279 @@
         </style>
     </head>
     <body>
-        <div class="p30">
-            <div class="f16">左侧宽度110px / 表单每行间距15px (默认)</div>
-            <div class="form mt30">
-                <div class="form-group">
-                    <div class="form-label">广告置放页面：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selPageType" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <select name="" id="selPageName" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <div class="fl form-comment">必填</div>
+    <div class="wrapper">
+        <header>
+            <h1 class="header">AutoUI</h1>
+            <p class="header"></p>
+
+
+
+            <ul>
+                <li><a class="buttons github" href="https://github.com/autoui">GitHub Profile</a></li>
+                <li><a href="formElement.html">form elements</a></li>
+                <li><a href="form-layout.html">form layout</a></li>
+                <li><a href="table.html">table</a></li>
+            </ul>
+
+        </header>
+        <section>
+            <div class="p30">
+                <div class="f16">左侧宽度110px / 表单每行间距15px (默认)</div>
+                <div class="form mt30">
+                    <div class="form-group">
+                        <div class="form-label">广告置放页面：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selPageType" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <select name="" id="selPageName" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <div class="fl form-comment">必填</div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">适用产品：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selProduct" class="fl select w360">
-                            <option value="">class: select w360</option>
-                        </select>
+                    <div class="form-group">
+                        <div class="form-label">适用产品：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selProduct" class="fl select w360">
+                                <option value="">class: select w360</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">推广文字：</div>
-                    <div class="form-content">
-                        <textarea name="" id="adText" rows="3" class="fl textarea w360 mr10" maxlength="120" placeholder="placeholder默认文本"></textarea>
+                    <div class="form-group">
+                        <div class="form-label">推广文字：</div>
+                        <div class="form-content">
+                            <textarea name="" id="adText" rows="3" class="fl textarea w360 mr10" maxlength="120" placeholder="placeholder默认文本"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                    <div class="form-group">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-content pt20">
-                        <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
-                        <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
-                        <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p30">
-            <div class="f16">左侧宽度110px / 表单每行间距10px</div>
-            <div class="form form-condensed mt30">
-                <div class="form-group">
-                    <div class="form-label">广告置放页面：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selPageType" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <select name="" id="selPageName" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <div class="fl form-comment">必填</div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">适用产品：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selProduct" class="fl select w360">
-                            <option value="">class: select w360</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">推广文字：</div>
-                    <div class="form-content">
-                        <textarea name="" id="adText" rows="3" class="fl textarea w360 mr10" maxlength="120" placeholder="placeholder默认文本"></textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-content pt20">
-                        <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
-                        <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
-                        <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                    <div class="form-group">
+                        <div class="form-content pt20">
+                            <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
+                            <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
+                            <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="p30">
-            <div class="f16">左侧宽度110px / 表单每行间距20px</div>
-            <div class="form form-expand mt30">
-                <div class="form-group">
-                    <div class="form-label">广告置放页面：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selPageType" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <select name="" id="selPageName" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <div class="fl form-comment">必填</div>
+            <div class="p30">
+                <div class="f16">左侧宽度110px / 表单每行间距10px</div>
+                <div class="form form-condensed mt30">
+                    <div class="form-group">
+                        <div class="form-label">广告置放页面：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selPageType" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <select name="" id="selPageName" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <div class="fl form-comment">必填</div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">适用产品：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selProduct" class="fl select w360">
-                            <option value="">class: select w360</option>
-                        </select>
+                    <div class="form-group">
+                        <div class="form-label">适用产品：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selProduct" class="fl select w360">
+                                <option value="">class: select w360</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">推广文字：</div>
-                    <div class="form-content">
-                        <textarea name="" id="adText" rows="3" class="fl textarea w360 mr10" maxlength="120" placeholder="placeholder默认文本"></textarea>
+                    <div class="form-group">
+                        <div class="form-label">推广文字：</div>
+                        <div class="form-content">
+                            <textarea name="" id="adText" rows="3" class="fl textarea w360 mr10" maxlength="120" placeholder="placeholder默认文本"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                    <div class="form-group">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-content pt20">
-                        <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
-                        <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
-                        <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="p30">
-            <div class="f16">内联表单(不适合表单中含有文本输入域或者图片高度不等的元素)</div>
-            <div class="form form-inline myform mt30">
-                <div class="form-group f12">
-                    <div class="form-label">广告置放页面：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selPageType" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <select name="" id="selPageName" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <div class="fl form-comment">*</div>
-                    </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">适用产品：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selProduct" class="fl select w360">
-                            <option value="">class: select w360</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
-                    </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
-                    </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
-                    </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-content pt20">
-                        <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
-                        <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
-                        <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                    <div class="form-group">
+                        <div class="form-content pt20">
+                            <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
+                            <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
+                            <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="p30">
-            <div class="f16">内联表单(不适合表单中含有文本输入域或者图片高度不等的元素)</div>
-            <div class="form form-auto mt30">
-                <div class="form-group f12">
-                    <div class="form-label">广告置放页面：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selPageType" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <select name="" id="selPageName" class="fl select w175 mr10">
-                            <option value="">class: select w175</option>
-                        </select>
-                        <div class="fl form-comment">*</div>
+            <div class="p30">
+                <div class="f16">左侧宽度110px / 表单每行间距20px</div>
+                <div class="form form-expand mt30">
+                    <div class="form-group">
+                        <div class="form-label">广告置放页面：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selPageType" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <select name="" id="selPageName" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <div class="fl form-comment">必填</div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">适用产品：</div>
-                    <div class="form-content pt5">
-                        <select name="" id="selProduct" class="fl select w360">
-                            <option value="">class: select w360</option>
-                        </select>
+                    <div class="form-group">
+                        <div class="form-label">适用产品：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selProduct" class="fl select w360">
+                                <option value="">class: select w360</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">推广图：</div>
-                    <div class="form-content">
-                        <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                    <div class="form-group">
+                        <div class="form-label">推广文字：</div>
+                        <div class="form-content">
+                            <textarea name="" id="adText" rows="3" class="fl textarea w360 mr10" maxlength="120" placeholder="placeholder默认文本"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">单选：</div>
-                    <div class="form-content">
-                        <label class="radio disabled">
-                            <input type="radio" name="radio1" class="hide" />
-                            <em class="radio-content">radio 单选文字1</em>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio1" class="hide" />
-                            <em class="radio-content">radio 单选文字2</em>
-                        </label>
+                    <div class="form-group">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group f12">
-                    <div class="form-label">复选：</div>
-                    <div class="form-content">
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox1" class="hide" />
-                            <em class="checkbox-content">checkbox 复选框</em>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" name="checkbox1" class="hide" />
-                            <em class="checkbox-content">checkbox 复选框</em>
-                        </label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-content pt20">
-                        <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
-                        <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
-                        <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                    <div class="form-group">
+                        <div class="form-content pt20">
+                            <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
+                            <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
+                            <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="p30">
+                <div class="f16">内联表单(不适合表单中含有文本输入域或者图片高度不等的元素)</div>
+                <div class="form form-inline myform mt30">
+                    <div class="form-group f12">
+                        <div class="form-label">广告置放页面：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selPageType" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <select name="" id="selPageName" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <div class="fl form-comment">*</div>
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">适用产品：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selProduct" class="fl select w360">
+                                <option value="">class: select w360</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-content pt20">
+                            <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
+                            <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
+                            <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p30">
+                <div class="f16">内联表单(不适合表单中含有文本输入域或者图片高度不等的元素)</div>
+                <div class="form form-auto mt30">
+                    <div class="form-group f12">
+                        <div class="form-label">广告置放页面：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selPageType" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <select name="" id="selPageName" class="fl select w175 mr10">
+                                <option value="">class: select w175</option>
+                            </select>
+                            <div class="fl form-comment">*</div>
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">适用产品：</div>
+                        <div class="form-content pt5">
+                            <select name="" id="selProduct" class="fl select w360">
+                                <option value="">class: select w360</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">推广图：</div>
+                        <div class="form-content">
+                            <input type="text" class="inp-text w360" placeholder="placeholder默认文本" />
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">单选：</div>
+                        <div class="form-content">
+                            <label class="radio disabled">
+                                <input type="radio" name="radio1" class="hide" />
+                                <em class="radio-content">radio 单选文字1</em>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="radio1" class="hide" />
+                                <em class="radio-content">radio 单选文字2</em>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group f12">
+                        <div class="form-label">复选：</div>
+                        <div class="form-content">
+                            <label class="checkbox">
+                                <input type="checkbox" name="checkbox1" class="hide" />
+                                <em class="checkbox-content">checkbox 复选框</em>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="checkbox1" class="hide" />
+                                <em class="checkbox-content">checkbox 复选框</em>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-content pt20">
+                            <a href="javascript:;" class="btn btn-default mr5" id="btnSaveOnline">保存，立即上线</a>
+                            <a href="javascript:;" class="btn btn-default-reverse mr5" id="btnSave">保存</a>
+                            <a href="javascript:;" class="btn btn-default-reverse" id="btnCancel">取消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p><small>Hosted on <a href="https://pages.github.com">GitHub</a></small></p>
+        </footer>
+    </div>
         <script type="text/javascript" src="global/jquery-1.8.3.min.js"></script>
         <script type="text/javascript" src="src/common/js/global.js"></script>
         <script>
