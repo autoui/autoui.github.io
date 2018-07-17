@@ -265,7 +265,7 @@ header ul {
 
 header li {
 	list-style-type: none;
-  width:132px;
+/*   width:132px; */
 	margin-bottom: 12px;
 	line-height: 1em;
 	padding: 6px 6px 6px 7px;
@@ -318,7 +318,7 @@ a.buttons:hover {
 /* Section - for main page content */
 
 section {
-  margin-left: 200px;
+  margin-left: 250px;
   padding-bottom:50px;
 }
 
