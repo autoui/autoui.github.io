@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>实现多列等高布局</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="stylesheet" href="stylesheets/github-light.css">
+
         <link rel="stylesheet" href="src/common/css/icon.autoui.css" />
         <link rel="stylesheet" href="src/common/css/reset.pc.css" />
         <link rel="stylesheet" href="src/common/css/common.pc.css" />
@@ -26,77 +29,96 @@
             overflow: hidden;
         }
         </style>
+        <script src="javascripts/scale.fix.js"></script>
     </head>
     <body>
-    <div class="p30">
-        <div class="f16">layout布局</div>
-        <div class="mt10 p30 border bgc-fff">
-            <div class="c-info ptb10">
-                <ul>
-                    <li>实现多列等高布局</li>
-                    <li>缺点：溢出容器部分会被隐藏</li>
-                </ul>
-            </div>
-            <div class="row-ctn">
-                <div class="row mt10 overflow-h">
-                    <div class="col col-4 col-xs-4">
-                        <div class="fullheight bg-odd">
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
-                            <p class="bg-odd">col-4(默认两列间隔30)last</p>
-                        </div>
+    <div class="wrapper">
+        <header>
+            <h1 class="header">AutoUI</h1>
+            <p class="header"></p>
+
+
+
+            <ul>
+                <li><a class="buttons github" href="https://github.com/autoui">GitHub Profile</a></li>
+                <li><a href="formElement.html">form elements</a></li>
+                <li><a href="form-layout.html">form layout</a></li>
+                <li><a href="table.html">table</a></li>
+                <li><a href="multiple-col-fullheight.html">multiple column fullheight</a></li>
+            </ul>
+
+        </header>
+        <section>
+            <div class="p30">
+                <div class="f16">layout布局</div>
+                <div class="mt10 p30 border bgc-fff">
+                    <div class="c-info ptb10">
+                        <ul>
+                            <li>实现多列等高布局</li>
+                            <li>缺点：溢出容器部分会被隐藏</li>
+                        </ul>
                     </div>
-                    <div class="col col-4 col-xs-4">
-                        <div class="fullheight bg-even">
-                            <p class="bg-even">col-4(默认两列间隔30)</p>
-                        </div>
-                    </div>
-                    <div class="col col-4 col-xs-4">
-                        <div class="fullheight bg-odd">
-                            <p class="bg-odd">col-4(默认两列间隔30)</p>
+                    <div class="row-ctn">
+                        <div class="row mt10 overflow-h">
+                            <div class="col col-4 col-xs-4">
+                                <div class="fullheight bg-odd">
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                    <p class="bg-odd">col-4(默认两列间隔30)last</p>
+                                </div>
+                            </div>
+                            <div class="col col-4 col-xs-4">
+                                <div class="fullheight bg-even">
+                                    <p class="bg-even">col-4(默认两列间隔30)</p>
+                                </div>
+                            </div>
+                            <div class="col col-4 col-xs-4">
+                                <div class="fullheight bg-odd">
+                                    <p class="bg-odd">col-4(默认两列间隔30)</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-
     </body>
 </html>
