@@ -21,7 +21,7 @@
     "mint-ui": "^2.2.7",
     "vue": "^2.2.6",
     "vue-iscroll-view": "^1.0.3",
-    "vue-moment": "^2.0.2",
+    "vue-moment": "^4.1.0",
     "vue-router": "^2.3.1",
     "vue-toast-mobile": "^2.0.0"
   },
